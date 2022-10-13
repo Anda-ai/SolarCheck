@@ -27,7 +27,9 @@
       // Create PDO instance
       try{
         $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+        echo "successfully connected to database";
       } catch(PDOException $e){
+        echo "could not to database";
         $this->error = $e->getMessage();
         echo $this->error;
       }
